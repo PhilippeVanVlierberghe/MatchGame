@@ -25,6 +25,8 @@
         
         Button {
             margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             box-shadow: inset 0px 1px 0px 0px #ffffff;
             background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
             background-color: #ededed;
@@ -56,16 +58,20 @@
 <body>
     <div id="QuestionBoard">
         <p id="pListLenght"></p>
-        <p id="pList">Click on "Next Question" to start</p>
+        <p id="pList">Which quiz would you like to take?</p>
         <p id="pAnswer">..................</p>
 
     </div>
-
+    <div id="SetQuestionTypeBoard">
+        <button id="btnC" onclick="setQuestionType('c')">Learn the categories.</button>
+        <button id="btnO" onclick="setQuestionType('o')">Learn the descriptions.</button>
+    </div>
     <div id="ButtonBoard">
-        <p>Match each design pattern with the correct category.</p>
+        <p>Please make it right combinations with the buttons below.</p>
         <br>
-        <button onclick="nextQuestion()">Next Question</button>
-        <button onclick="btnErrorList()">Show your error list</button>
+        <!-- Rounded switch -->
+        <button id="btnNQ" onclick="nextQuestion()">Next Question</button>
+        <button id="btnE" onclick="btnErrorList()">Show your error list</button>
 
         <br>
         <br>
